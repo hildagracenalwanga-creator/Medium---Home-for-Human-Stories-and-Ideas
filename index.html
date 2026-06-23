@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium - Where good ideas find you</title>
+    <!-- This links our CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -this will help us with the dropdown arrows in the navigation bar -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ============ The navigation bar ============ -->
+    <header>
+        <nav>
+            <!-- Left: Logo -->
+            <div class="logo">
+                <a href="#">Medium</a>
+            </div>
+
+            <!-- Right: Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="#">Our story</a></li>
+                <li><a href="#">Membership</a></li>
+                <li><a href="#">Write</a></li>
+                <li>
+                    <!-- the Sign In dropdown -->
+                    <div class="dropdown">
+                        <button class="dropdown-btn">
+                            Sign In <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#"><i class="fas fa-envelope"></i> Email</a>
+                            <a href="#"><i class="fab fa-google"></i> Google</a>
+                            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                            <hr>
+                            <a href="#"><i class="fas fa-user-plus"></i> Create account</a>
+                        </div>
+                    </div>
+                </li>
+                <li><button class="btn btn-dark">Get Started</button></li>
+            </ul>
+            <!-- Mobile Hamburger Menu -->
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+   
