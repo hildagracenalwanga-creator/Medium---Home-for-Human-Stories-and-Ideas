@@ -21,9 +21,6 @@ Semantic HTML5 structure for better accessibility
 ## Technologies Used
 
 HTML5
-CSS3
-Flexbox
-CSS Grid
 Font Awesome (icons)
 Google Fonts (Fraunces)
 
@@ -63,24 +60,11 @@ Uses an 8-point grid system for consistent spacing throughout.
 
 Hero image sourced from Medium's official illustration library.
 
-## Course Information
-
-Institution: BeTechified
-Course: Frontend Development
-Project: Capstone Project
-
-
-## Evaluation Criteria
-
-Correct HTML structure and semantic tags
-CSS styling that resembles Medium's landing page
-Responsiveness for mobile and desktop
-Creativity and attention to detail
-Quality of documentation
 
 ## Contributors
 
-Hilda Grace Nalwanga - Project Lead & Developer
+1. Hilda Grace Nalwanga 
+2. 
 
 ## License
 
