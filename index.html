@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- ensures proper character encoding for all languages and emojis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- enables responsive design across all devices -->
+    <title>The African Quill | Where African Voices Connect</title>
+    <!-- browser tab title reflecting African storytelling theme -->
+
+    <!-- google font: fraunces for elegant heading typography -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome 6 for icon library (social, ui, and decorative icons) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- external stylesheet containing all css rules -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ========== creative addition 1: scroll progress bar ========== -->
+    <!-- purpose: shows reading progress at top of page -->
+    <div class="progress-bar">
+      <div class="progress-bar-fill" id="progressBarFill"></div>
+    </div>
+
+    <!-- ========== header: fixed navigation bar ========== -->
+    <header>
+      <!-- primary navigation container -->
+      <nav>
+        <!-- brand logo linking to homepage - now reflecting african identity -->
+        <div class="logo">
+          <a href="#">The African Quill</a>
+          <!-- a quill represents writing and storytelling - embodies african literary tradition -->
+        </div>
+
+        <!-- navigation links container (desktop shown, mobile toggled) -->
+        <ul class="nav-links">
+          <!-- primary navigation items -->
+          <li><a href="#">Our story</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#" class="write-link">Share</a></li>
+          <!-- green accent maintained for consistency -->
+
+          <li>
+            <!-- interactive sign in dropdown component -->
+            <div class="dropdown">
+              <button
+                class="dropdown-btn"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <!-- toggles dropdown visibility on click -->
+                Join us <i class="fas fa-chevron-down"></i>
+                <!-- chevron icon indicates expandable content -->
+              </button>
+              <!-- dropdown menu: hidden by default, toggled via javascript -->
+              <div class="dropdown-content" role="menu">
+                <!-- login options with platform-specific icons -->
+                <a href="#" role="menuitem"
+                  ><i class="fas fa-envelope"></i> Email</a
+                >
+                <a href="#" role="menuitem"
+                  ><i class="fab fa-google"></i> Google</a
+                >
+                <a href="#" role="menuitem"
+                  ><i class="fab fa-facebook"></i> Facebook</a
+                >
+                <a href="#" role="menuitem"
+                  ><i class="fab fa-twitter"></i> Twitter</a
+                >
+                <hr />
+                <!-- visual separator between login and account creation -->
+                <a href="#" role="menuitem"
+                  ><i class="fas fa-user-plus"></i> Create account</a
+                >
+              </div>
+            </div>
+          </li>
+
+          <!-- primary call-to-action button -->
+          <li><button class="btn btn-primary">Get started</button></li>
+        </ul>
+
+        <!-- mobile hamburger menu toggle (visible only on smaller screens) -->
+        <div
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle navigation menu"
+        >
+          <i class="fas fa-bars"></i>
+          <!-- three-line icon represents collapsible menu -->
+        </div>
+      </nav>
+    </header>
+
+    <!-- ========== hero section: main banner ========== -->
+    <section class="hero">
+      <!-- left content column: text and cta -->
+      <div class="hero-content">
+        <!-- creative addition 2: typing animation on hero headline -->
+        <!-- purpose: dynamic typing effect captures attention -->
+        <h1 class="typing-text">African<br />stories &amp; ideas</h1>
+        <!-- supporting tagline explaining platform value with african philosophy -->
+        <p class="hero-subtitle">
+          A place to share, connect, and celebrate our unique perspectives
+        </p>
+        <!-- action buttons container -->
+        <div class="hero-buttons">
+          <button class="btn btn-primary btn-large">Start exploring</button>
+        </div>
+      </div>
+
+      <!-- right column: decorative illustration - now using african-inspired image -->
+      <div class="hero-image-wrapper">
+        <img
+          src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/blogs/16352/images/smgxvUMTgK2ZGGNAN198_shutterstock_255266638.jpg"
+          alt="African landscape and culture illustration showing unity and diversity"
+          class="hero-image"
+        />
+        <!-- image showcases african beauty and togetherness -->
+      </div>
+    </section>
+
+    <!-- ========== creative addition 3: trending topics ========== -->
+    <!-- purpose: shows popular topics with interactive hover effects - now african-focused -->
+    <section class="trending-topics">
+      <h2>🔥 Trending Across Africa</h2>
+      <div class="topic-tags">
+        <span class="topic-tag">Science and Technology</span>
+        <span class="topic-tag">Art & Design</span>
+        <span class="topic-tag">Leadership & Culture</span>
+        <span class="topic-tag">Business & Wellness</span>
+        <span class="topic-tag">Music and Creative Expression</span>
+        <span class="topic-tag">Education and Sports</span>
+        <span class="topic-tag">Environment</span>
+      </div>
+    </section>
+
+    <!-- ========== features section: value proposition ========== -->
+    <!-- purpose: explains why this platform matters with 3 benefit cards -->
+    <section class="features">
+      <!-- section header with descriptive text -->
+      <div class="features-header">
+        <h2>Why The African Quill?</h2>
+        <p>Discover fresh ideas and perspectives from across the continent.</p>
+      </div>
+
+      <!-- three-column feature grid showcasing platform benefits -->
+      <div class="features-grid">
+        <!-- feature card 1: share -->
+        <div class="feature-card">
+          <i class="fas fa-pen-fancy"></i>
+          <!-- writing icon -->
+          <h3>Share Your Story</h3>
+          <p>Amplify your voice and inspire others</p>
+        </div>
+
+        <!-- feature card 2: connect -->
+        <div class="feature-card">
+          <i class="fas fa-users"></i>
+          <!-- community icon -->
+          <h3>Connect Deeper</h3>
+          <p>Engage with a community of thinkers</p>
+        </div>
+
+        <!-- feature card 3: learn -->
+        <div class="feature-card">
+          <i class="fas fa-lightbulb"></i>
+          <!-- learning/insight icon -->
+          <h3>Grow Wiser</h3>
+          <p>Learn from diverse perspectives</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== creative addition 4: stats dashboard ========== -->
+    <!-- purpose: social proof with african-focused statistics -->
+    <div class="stats-dashboard">
+      <div class="stat-item">
+        <span class="stat-number animate">50K+</span>
+        <span class="stat-label">African Voices</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number animate">20K+</span>
+        <span class="stat-label">Stories Shared</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number animate">54+</span>
+        <span class="stat-label">Countries</span>
+      </div>
+    </div>
+
+    <!-- ========== newsletter section: email capture ========== -->
+    <!-- purpose: builds email list for future engagement -->
+    <section class="newsletter">
+      <h2>Get stories from the heart of Africa</h2>
+      <p>Weekly digest of inspiring stories and ideas</p>
+      <!-- email subscription form -->
+      <div class="newsletter-form">
+        <input
+          type="email"
+          placeholder="Your email address"
+          aria-label="Email address for newsletter"
+        />
+        <button class="btn btn-primary">Subscribe</button>
+      </div>
+    </section>
+
+    <!-- ========== creative addition 5: testimonials ========== -->
+    <!-- purpose: builds trust and credibility through social proof - representing 5 african countries -->
+    <section class="testimonials">
+      <h2>What Our Community Says</h2>
+      <div class="testimonials-grid">
+        <!-- testimonial 1 - ugandan -->
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left"></i>
+          <p>"The African Quill has given Ugandan writers a powerful voice."</p>
+          <div class="testimonial-author">
+            <i class="fas fa-user-circle"></i>
+            <span>Esther Murungi</span>
+            <span class="country-tag">Uganda</span>
+          </div>
+        </div>
+
+        <!-- testimonial 2 - south african -->
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left"></i>
+          <p>
+            "I've discovered so many inspiring stories from across the
+            continent."
+          </p>
+          <div class="testimonial-author">
+            <i class="fas fa-user-circle"></i>
+            <span>Thandeka Ndlovu</span>
+            <span class="country-tag"> South Africa</span>
+          </div>
+        </div>
+
+        <!-- testimonial 3 - ghanaian -->
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left"></i>
+          <p>
+            "The African Quill is where our unique perspectives come together."
+          </p>
+          <div class="testimonial-author">
+            <i class="fas fa-user-circle"></i>
+            <span>Kwame Asante</span>
+            <span class="country-tag">Ghana</span>
+          </div>
+        </div>
+
+        <!-- testimonial 4 - nigerian -->
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left"></i>
+          <p>
+            "This platform has amplified Nigerian voices like never before."
+          </p>
+          <div class="testimonial-author">
+            <i class="fas fa-user-circle"></i>
+            <span>Chidi Okonkwo</span>
+            <span class="country-tag">Nigeria</span>
+          </div>
+        </div>
+
+        <!-- testimonial 5 - nigerien -->
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left"></i>
+          <p>
+            "The African Quill connects us all through the power of
+            storytelling."
+          </p>
+          <div class="testimonial-author">
+            <i class="fas fa-user-circle"></i>
+            <span>Fatima Diallo</span>
+            <span class="country-tag">Niger</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== footer: navigation and legal ========== -->
+    <footer>
+      <div class="footer-content">
+        <!-- footer navigation links -->
+        <div class="footer-links">
+          <a href="#">Help</a>
+          <a href="#">Status</a>
+          <a href="#">About</a>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+          <a href="#">Blog</a>
+          <a href="#">Store</a>
+          <a href="#">Privacy</a>
+          <a href="#">Rules</a>
+          <a href="#">Terms</a>
+          <a href="#">Text to speech</a>
+        </div>
+        <!-- copyright notice with current year -->
+        <p class="copyright">
+          &copy; 2026 The African Quill. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- ========== creative addition 6: back to top button ========== -->
+    <!-- purpose: smooth scroll to top with animated button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ========== creative addition 7: floating social share ========== -->
+    <!-- purpose: encourages social sharing with branded buttons -->
+    <div class="floating-actions">
+      <button class="float-btn" aria-label="Share on Twitter">
+        <i class="fab fa-twitter"></i>
+      </button>
+      <button class="float-btn" aria-label="Share on Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </button>
+      <button class="float-btn" aria-label="Share on LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </button>
+      <button class="float-btn main-float" aria-label="Share">
+        <i class="fas fa-share-alt"></i>
+      </button>
+    </div>
+
+    <!-- ========== javascript: interactive functionality ========== -->
+    <script>
+      // ========================================
+      // 1. dropdown toggle: shows/hides sign-in options
+      // ========================================
+      document
+        .querySelector(".dropdown-btn")
+        .addEventListener("click", function (e) {
+          e.stopPropagation(); // prevents immediate closing on click
+          const dropdownContent = this.nextElementSibling;
+          dropdownContent.classList.toggle("show");
+          // update aria attribute for accessibility
+          this.setAttribute(
+            "aria-expanded",
+            dropdownContent.classList.contains("show"),
+          );
+        });
+
+      // ========================================
+      // 2. dropdown close: closes when clicking outside
+      // ========================================
+      window.addEventListener("click", function (e) {
+        // check if click is outside dropdown button and dropdown content
+        if (
+          !e.target.matches(".dropdown-btn") &&
+          !e.target.matches(".dropdown-btn i") &&
+          !e.target.closest(".dropdown-content")
+        ) {
+          document.querySelectorAll(".dropdown-content").forEach((dropdown) => {
+            dropdown.classList.remove("show");
+          });
+          // reset aria attributes
+          document
+            .querySelector(".dropdown-btn")
+            .setAttribute("aria-expanded", "false");
+        }
+      });
+
+      // ========================================
+      // 3. hamburger menu: toggles mobile navigation
+      // ========================================
+      document
+        .getElementById("hamburger")
+        .addEventListener("click", function () {
+          const navLinks = document.querySelector(".nav-links");
+          navLinks.classList.toggle("active");
+          // accessibility: toggle aria-label
+          this.setAttribute(
+            "aria-label",
+            navLinks.classList.contains("active")
+              ? "Close navigation menu"
+              : "Toggle navigation menu",
+          );
+        });
+
+      // ========================================
+      // 4. creative: scroll progress bar
+      // this will show reading progress at top
+      // ========================================
+      window.addEventListener("scroll", function () {
+        const scrollTop = window.scrollY;
+        const docHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
+        const progress = (scrollTop / docHeight) * 100;
+        const progressFill = document.getElementById("progressBarFill");
+        if (progressFill) {
+          progressFill.style.width = progress + "%";
+        }
+      });
+
+      // ========================================
+      // 5. creative: back to top button
+      // this will show/hide based on scroll position
+      // ========================================
+      const backToTopBtn = document.getElementById("backToTop");
+
+      if (backToTopBtn) {
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 500) {
+            backToTopBtn.classList.add("visible");
+          } else {
+            backToTopBtn.classList.remove("visible");
+          }
+        });
+
+        backToTopBtn.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      }
+
+      // ========================================
+      // 6. creative: particle effects
+      // this will add floating sparkles in background
+      // ========================================
+      function createParticles() {
+        for (let i = 0; i < 30; i++) {
+          const particle = document.createElement("div");
+          particle.className = "particle";
+          particle.style.left = Math.random() * 100 + "%";
+          particle.style.width = Math.random() * 6 + 2 + "px";
+          particle.style.height = particle.style.width;
+          const colors = [
+            "#1a8917",
+            "#23d5ab",
+            "#ee7752",
+            "#e73c7e",
+            "#23a6d5",
+          ];
+          particle.style.background =
+            colors[Math.floor(Math.random() * colors.length)];
+          particle.style.borderRadius = "50%";
+          particle.style.position = "fixed";
+          particle.style.pointerEvents = "none";
+          particle.style.zIndex = "-1";
+          particle.style.animationDuration = Math.random() * 20 + 10 + "s";
+          particle.style.animationDelay = Math.random() * 20 + "s";
+          particle.style.animation = "floatParticle linear infinite";
+          document.body.appendChild(particle);
+        }
+      }
+      createParticles();
+
+      // ========================================
+      // 7. creative: stats animations
+      // this will animate stats numbers on load
+      // ========================================
+      const statNumbers = document.querySelectorAll(".stat-number");
+
+      const animateStats = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          }
+        });
+      };
+
+      const statObserver = new IntersectionObserver(animateStats, {
+        threshold: 0.5,
+      });
+
+      statNumbers.forEach((stat) => {
+        statObserver.observe(stat);
+      });
+
+      // ========================================
+      // 8. console logs: platform info
+      // the logs will display platform details in browser console
+      // ========================================
+      console.log(" The African Quill platform loaded successfully!");
+      console.log(" Where every voice matters - join the conversation!");
+      console.log(" Features celebrating African voices:");
+      console.log("  1. The African Quill logo & storytelling tradition");
+      console.log("  2. African storytelling focus");
+      console.log("  3. Community-driven content");
+      console.log("  4. 54+ countries represented");
+      console.log("  5. Diverse voices & perspectives");
+      console.log("  6. Celebrating uniqueness and togetherness");
+      console.log("  Trending Topics:");
+      console.log("  - Science and Technology");
+      console.log("  - Art & Design");
+      console.log("  - Leadership & Culture");
+      console.log("  - Business & Wellness");
+      console.log("  - Music and Creative Expression");
+      console.log("  - Education and Sports");
+      console.log("  - Environment");
+      console.log("  Meet our community voices from across Africa:");
+      console.log("  Esther Murungi - Uganda");
+      console.log("  Thandeka Ndlovu - South Africa");
+      console.log("  Kwame Asante - Ghana");
+      console.log("  Chidi Okonkwo - Nigeria");
+      console.log("  Fatima Diallo - Niger");
+    </script>
+  </body>
+</html>

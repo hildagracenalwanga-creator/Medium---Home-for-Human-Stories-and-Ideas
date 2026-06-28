@@ -301,3 +301,623 @@ h1 {
     font-weight: bold;
     unicode-bidi: isolate;
 }
+
+/* ========================================
+   section 1: features section
+   purpose: displays 3 value proposition cards
+   html tags: .features, .features-header, .features-grid, .feature-card
+   ======================================== */
+
+.features {
+  padding: 80px 60px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.features-header h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  font-family: "Fraunces", serif;
+}
+
+.features-header p {
+  font-size: 20px;
+  color: #555;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1100px;
+  margin: 50px auto 0;
+}
+
+.feature-card {
+  padding: 40px 20px;
+  border-radius: 12px;
+  background: #fafafa;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card i {
+  font-size: 40px;
+  color: #1a8917;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ========================================
+   section 2: newsletter section
+   purpose: email subscription call-to-action
+   html tags: .newsletter, .newsletter-form
+   ======================================== */
+
+.newsletter {
+  padding: 80px 60px;
+  background: #f5f0e8;
+  text-align: center;
+}
+
+.newsletter h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-family: "Fraunces", serif;
+}
+
+.newsletter p {
+  font-size: 18px;
+  color: #555;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  max-width: 500px;
+  margin: 30px auto 0;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.newsletter-form input:focus {
+  border-color: #1a8917;
+}
+
+/* ========================================
+   section 3: footer enhancements
+   purpose: copyright notice styling
+   html tags: .copyright
+   ======================================== */
+
+.copyright {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* ========================================
+   section 4: responsive design for new sections
+   purpose: mobile-friendly styling for new sections
+   breakpoint: 768px (matches existing media query)
+   html tags affected: .features, .newsletter
+   ======================================== */
+
+@media (max-width: 768px) {
+  .features {
+    padding: 50px 20px;
+  }
+
+  .features-header h2 {
+    font-size: 36px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .feature-card {
+    padding: 30px 20px;
+  }
+
+  .newsletter {
+    padding: 50px 20px;
+  }
+
+  .newsletter h2 {
+    font-size: 28px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+  }
+}
+
+/* ========================================
+   section 5: ui polish & enhancements
+   purpose: adds smooth transitions and subtle animations
+   html tags affected: .btn, .write-link, .footer-links a, html
+   note: only adds transitions - existing styles remain unchanged
+   ======================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btn {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.02);
+}
+
+.write-link {
+  transition: color 0.3s ease;
+}
+
+.footer-links a {
+  transition: color 0.3s ease;
+}
+
+/* ========================================
+   section 6: animated gradient background
+   purpose: adds dynamic color movement to hero section
+   html tags: .gradient-bg
+   ======================================== */
+
+.gradient-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  opacity: 0.1;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ========================================
+   section 7: glass-morphism cards
+   purpose: modern frosted glass effect on cards
+   html tags: .glass-card, .feature-card
+   ======================================== */
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* ========================================
+   section 8: scroll progress bar
+   purpose: shows reading progress at top of page
+   html tags: .progress-bar, .progress-bar-fill
+   ======================================== */
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.05);
+  z-index: 9999;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #1a8917, #23d5ab);
+  transition: width 0.1s ease;
+}
+
+/* ========================================
+   section 9: trending topics tags
+   purpose: interactive topic tags with hover effects
+   html tags: .trending-topics, .topic-tag
+   ======================================== */
+
+.trending-topics {
+  padding: 40px 60px;
+  text-align: center;
+  background: transparent;
+}
+
+.trending-topics h2 {
+  font-family: "Fraunces", serif;
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.topic-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.topic-tag {
+  padding: 8px 20px;
+  border-radius: 30px;
+  background: #f0f0f0;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.topic-tag:hover {
+  background: #1a8917;
+  color: white;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 20px rgba(26, 137, 23, 0.3);
+}
+
+.topic-tag:nth-child(odd):hover {
+  background: #e73c7e;
+  box-shadow: 0 5px 20px rgba(231, 60, 126, 0.3);
+}
+
+.topic-tag:nth-child(3n):hover {
+  background: #23a6d5;
+  box-shadow: 0 5px 20px rgba(35, 166, 213, 0.3);
+}
+
+/* ========================================
+   section 10: stats dashboard
+   purpose: displays animated reading statistics
+   html tags: .stats-dashboard, .stat-item, .stat-number
+   ======================================== */
+
+.stats-dashboard {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 16px;
+  margin: 40px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 36px;
+  font-weight: 800;
+  color: #1a8917;
+  font-family: "Fraunces", serif;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.stat-number.animate {
+  animation: countUp 2s ease-out;
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   section 11: testimonials section
+   purpose: social proof with reader quotes
+   html tags: .testimonials, .testimonial-card
+   ======================================== */
+
+.testimonials {
+  padding: 80px 60px;
+  background: linear-gradient(135deg, #f5f0e8 0%, #e8f5e8 100%);
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-family: "Fraunces", serif;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  padding: 30px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card i.fa-quote-left {
+  color: #1a8917;
+  font-size: 30px;
+  opacity: 0.5;
+  margin-bottom: 15px;
+}
+
+.testimonial-card p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.testimonial-author i {
+  font-size: 30px;
+  color: #1a8917;
+}
+
+.testimonial-author span {
+  font-weight: 600;
+}
+
+/* ========================================
+   section 12: back to top button
+   purpose: smooth scroll to top with animation
+   html tags: .back-to-top
+   ======================================== */
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #1a8917;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(26, 137, 23, 0.3);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 6px 25px rgba(26, 137, 23, 0.4);
+}
+
+/* ========================================
+   section 13: floating social share buttons
+   purpose: encourages social sharing with branded buttons
+   html tags: .floating-actions, .float-btn, .main-float
+   ======================================== */
+
+.floating-actions {
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.float-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  color: #333;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.float-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.main-float {
+  background: #1a8917;
+  color: white;
+  width: 55px;
+  height: 55px;
+  font-size: 22px;
+}
+
+.main-float:hover {
+  background: #146412;
+  transform: scale(1.1) rotate(45deg);
+}
+
+.float-btn:nth-child(1):hover { background: #1DA1F2; color: white; }
+.float-btn:nth-child(2):hover { background: #1877F2; color: white; }
+.float-btn:nth-child(3):hover { background: #0A66C2; color: white; }
+
+/* ========================================
+   section 14: responsive for creative additions
+   purpose: mobile-friendly styling for all new creative features
+   breakpoint: 768px (matches existing media query)
+   ======================================== */
+
+@media (max-width: 768px) {
+  .trending-topics {
+    padding: 30px 20px;
+  }
+
+  .stats-dashboard {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 20px;
+    margin: 20px;
+  }
+
+  .testimonials {
+    padding: 50px 20px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .floating-actions {
+    left: 15px;
+    bottom: 15px;
+  }
+
+  .float-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .main-float {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* ========================================
+   section 15: typing animation
+   purpose: dynamic typing effect on hero text
+   html tags: .typing-text
+   ======================================== */
+
+.typing-text {
+  overflow: hidden;
+  border-right: 3px solid #1a8917;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #1a8917; }
+}
+
+/* ========================================
+   section 16: floating particles
+   purpose: animated sparkles in background
+   html tags: .particle
+   ======================================== */
+
+.particle {
+  position: fixed;
+  pointer-events: none;
+  z-index: -1;
+  animation: floatParticle linear infinite;
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
