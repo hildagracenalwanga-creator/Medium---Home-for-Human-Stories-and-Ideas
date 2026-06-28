@@ -1,0 +1,303 @@
+/* ===========================
+   GENERAL STYLES
+=========================== */
+
+body {
+  font-family: "Georgia", serif;
+  margin: 0;
+  padding: 0;
+  color: #242424;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  background-color: #000;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #333;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  border-bottom: 1px solid #e5e5e5;
+  background: white;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a:hover {
+  color: #1a8917;
+}
+
+/* ===========================
+   DROPDOWN
+=========================== */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 180px;
+  background: white;
+  border: 1px solid #ddd;
+  display: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px;
+}
+
+.dropdown-content a:hover {
+  background: #f4f4f4;
+}
+
+.dropdown-content hr {
+  margin: 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.show {
+  display: block;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 60px;
+  background: #f7f7f7;
+}
+
+.hero-content {
+  max-width: 550px;
+}
+
+.hero h1 {
+  font-size: 80px;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.btn-large {
+  padding: 15px 35px;
+  font-size: 18px;
+}
+
+.hero-image-wrapper {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-image {
+  max-width: 100%;
+  width: 500px;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer {
+  background: #fafafa;
+  border-top: 1px solid #e5e5e5;
+  padding: 30px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: #1a8917;
+}
+
+/* ===========================
+   HAMBURGER MENU
+=========================== */
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media(max-width:768px){
+
+  nav{
+    padding:20px;
+  }
+
+  .hamburger{
+    display:block;
+  }
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:80px;
+    left:0;
+    width:100%;
+    background:white;
+    flex-direction:column;
+    padding:20px 0;
+    border-top:1px solid #ddd;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .hero{
+    flex-direction:column;
+    text-align:center;
+    padding:50px 20px;
+  }
+
+  .hero h1{
+    font-size:50px;
+  }
+
+  .hero-subtitle{
+    font-size:20px;
+  }
+
+  .hero-image{
+    width:300px;
+    margin-top:30px;
+  }
+
+}
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media (max-width: 768px) {
+
+  nav {
+    padding: 20px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 30px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+h1 {
+   display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
